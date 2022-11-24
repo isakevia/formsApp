@@ -1,9 +1,53 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="roxo">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button color="roxo">Login</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div id="header">
+    <h1>Registro</h1>
+    <img src="https://th.bing.com/th/id/R.500add68aa13da25f88adb0a5d2146aa?rik=AUbpMfNjVdrDCQ&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_127104.png&ehk=9X3tFr14PUyNYkANTkwTEgKetFsNlXR%2bGNGQSExZToE%3d&risl=&pid=ImgRaw&r=0"/>
+  </div>
+
+  <ion-card>
+    <form [formGroup]="formRegistro">
+    <ion-item>
+      <ion-label position="stacked" color="dark"><strong>Nome</strong></ion-label>
+      <ion-input placeholder="" formControlName="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="dark"><strong>CPF</strong></ion-label>
+      <ion-input type="number" formControlName="cpf"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="dark"><strong>Email</strong></ion-label>
+      <ion-input placeholder="" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="dark"><strong>Senha</strong></ion-label>
+      <ion-input type="password" placeholder="" formControlName="senha"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="dark"><strong>Confirmar senha</strong></ion-label>
+      <ion-input type="password" placeholder="" formControlName="confirmaSenha"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="roxo" (click)="salvarRegistro()">Salvar</ion-button>
+    <ion-button expand="block" color="roxo">Voltar</ion-button>
+  </form>
+  </ion-card>
 
 </ion-content>
