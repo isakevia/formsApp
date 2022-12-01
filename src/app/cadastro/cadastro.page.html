@@ -1,9 +1,48 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>cadastro</ion-title>
+    <ion-buttons slot="start">
+      <ion-button color="roxo">
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <div id="header">
+    <h1>Produto</h1>
+  </div>
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Produto</ion-label>
+      <ion-select placeholder="Selecione">
+        <ion-select-option value="">Bala baiana</ion-select-option>
+        <ion-select-option value="">Brigadeiro</ion-select-option>
+        <ion-select-option value="">Maçã do amor</ion-select-option>
+        <ion-select-option value="">Brigadeiro com morango</ion-select-option>
+        <ion-select-option value="">Beijinho</ion-select-option>
+        <ion-select-option value="">Pavê de chocolate</ion-select-option>
+        <ion-select-option value="">Pudim</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="dark"><strong>Descrição</strong></ion-label>
+      <ion-input placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="dark"><strong>Validade</strong></ion-label>
+      <ion-input type="date" placeholder=""></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked" color="dark"><strong>Preço</strong></ion-label>
+      <ion-input type="password" placeholder=""></ion-input>
+    </ion-item>
+<br>
+    <ion-button expand="block" color="roxo">Entrar</ion-button>
+  </ion-card>
 
 </ion-content>

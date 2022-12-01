@@ -13,12 +13,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-item routerLink="/login"><b>Login</b></ion-item>
-  <ion-item routerLink="/registro"><b>Registro</b></ion-item>
-  <ion-item routerLink="/cadastro"><b>Cadastro</b></ion-item>
+  <ion-button expand="block" color="roxo" routerLink="/login">Login</ion-button>
+  <ion-button expand="block" color="roxo" routerLink="/registro">Registro</ion-button>
+  <ion-button expand="block" color="roxo" routerLink="/cadastro">Cadastro</ion-button>
+
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        <b>Usuários</b>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
   <ion-item-sliding *ngFor="let user of listaUsuarios">
-
 
     <ion-item>
       <ion-label>
