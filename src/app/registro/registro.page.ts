@@ -1,7 +1,5 @@
 import { StorageService } from './../services/storage.service';
 import { Usuario } from './../models/usuario';
-import { comparaValidator } from './../validators/compara-validator';
-import { CpfValidator } from './../validators/cpf-validator';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -45,13 +43,11 @@ export class RegistroPage implements OnInit {
   constructor(private formBuilder: FormBuilder, private storageService: StorageService, private route: Router) {
     this.formRegistro = this.formBuilder.group({
       nome: ['', Validators.compose([Validators.required, Validators.minLength(3)])],
-      cpf: ['', Validators.compose([Validators.required, CpfValidator.cpfValido])],
+      cpf: ['', Validators.compose([Validators.required])],
       email: ['', Validators.compose([Validators.required, Validators.email])],
       senha: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(8)])],
       confirmaSenha: ['', Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(8)])]
-    }, {
-      validator: comparaValidator('senha', 'confirmaSenha')
-    });
+    },);
   }
 
   ngOnInit() {
